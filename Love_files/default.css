@@ -1,0 +1,128 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #F5E8DC;
+	font-size: 20px;
+	font-family: '微软雅黑', '宋体', sans-serif;
+	color: #5C4033;
+	overflow: auto
+}
+
+a {
+	color: #5C4033;
+	font-size: 14px;
+}
+
+#main {
+	width: 100%;
+}
+
+#wrap {
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+	height: 680px;
+	margin-top: 100px;
+}
+
+#text {
+	width: 400px;
+	height: 425px;
+	left: 60px;
+	top: 80px;
+	position: absolute;
+}
+
+#code {
+	display: none;
+	font-size: 30px;
+}
+
+#clock-box {
+	position: absolute;
+	left: 60px;
+	top: 570px;
+	font-size: 28px;
+	display: none;
+}
+
+#clock-box a {
+	font-size: 30px;
+	text-decoration: none;
+}
+
+#clock {
+	margin-left: 5px;
+}
+
+#clock .digit {
+	font-size: 40px;
+}
+
+#canvas {
+	margin: 0 auto;
+	width: 1100px;
+	height: 680px;
+}
+
+#error {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 60px;
+	display: none;
+}
+
+.hand {
+	cursor: pointer;
+}
+
+.say {
+	margin-left: 5px;
+}
+
+.space {
+	margin-right: 150px;
+}
+
+/* Controles de música */
+#musicControl {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: rgba(190, 26, 37, 0.8);
+	padding: 8px 10px;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+}
+
+#toggleMusic {
+	background: none;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.2s;
+}
+
+#toggleMusic:hover {
+	transform: scale(1.2);
+}
+
+#toggleMusic.muted {
+	opacity: 0.5;
+}
+
+#volumeControl {
+	width: 60px;
+	cursor: pointer;
+	accent-color: #BE1A25;
+}
