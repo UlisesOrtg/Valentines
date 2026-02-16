@@ -171,17 +171,20 @@
 // Control de música
 document.addEventListener('DOMContentLoaded', function() {
     const bgMusic = document.getElementById('bgMusic');
+    bgMusic.play();
     const toggleMusic = document.getElementById('toggleMusic');
     const volumeControl = document.getElementById('volumeControl');
     
-    // Intentar reproducir con volumen inicial
+    // Configurar volumen
     bgMusic.volume = 0.7; // 70% de volumen inicial
     
-    // Intenta autoplay (algunos navegadores requieren interacción del usuario)
-    bgMusic.play().catch(function() {
-        // Si falla el autoplay, muestra mensaje
-        console.log("Autoplay bloqueado. Haz clic en el botón de música para reproducir.");
-    });
+    // Activar música automáticamente (sin sonido permite autoplay)
+    setTimeout(function() {
+        bgMusic.muted = false; // Quitar mute
+        bgMusic.play().catch(function(error) {
+            console.log("Nota: Presiona el botón de música para iniciar (algunos navegadores requieren interacción)");
+        });
+    }, 500); // Esperar 500ms para asegurar carga completa
     
     // Toggle de silencio
     toggleMusic.addEventListener('click', function() {
